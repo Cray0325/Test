@@ -1,5 +1,5 @@
 ---
-- name: My playbook for Variables Lesson
+- name: My playbook,to print messages in variables
   hosts: all
   become: yes
 
@@ -8,11 +8,12 @@
   message2:World
   secret:hty57685hty57685
 
-  taska: 
+  tasks: 
 
 - name: Print Variables message1
   debug:
     var: message1 
+
 - debug:
     msg: "Secret word: {{ secret }}"
 
@@ -21,5 +22,11 @@
 
 - set_fact: full_message"{{ message1 }} {{ message2 }} from {{ owner }}"
 
--debug:
+- debug:
     var: full_message
+
+- debug:
+    var: ansible_distribution
+
+
+
