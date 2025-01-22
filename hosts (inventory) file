@@ -1,4 +1,4 @@
-#A small host file with a group of hosts and variables
+#A small host file with a group of hosts and variables.
 
 (test_servers) 
 Linux1   ansible_host=170.11.1.11   ansible_user=ec2-user   owner: Kirill
