@@ -1,0 +1,25 @@
+---
+- name: My playbook for Variables Lesson
+  hosts: all
+  become: yes
+
+  vars:
+  message1:Hello
+  message2:World
+  secret:hty57685hty57685
+
+  taska: 
+
+- name: Print Variables message1
+  debug:
+    var: message1 
+- debug:
+    msg: "Secret word: {{ secret }}"
+
+- debug:
+    msg: "Owner of this server: -->{{ owner }}<--"
+
+- set_fact: full_message"{{ message1 }} {{ message2 }} from {{ owner }}"
+
+-debug:
+    var: full_message
