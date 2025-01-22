@@ -1,0 +1,7 @@
+#A small host file with a group of hosts and variables
+
+(test_servers) 
+Linux1   ansible_host=170.11.1.11   ansible_user=ec2-user   owner: Kirill
+Ubuntu2  ansible_host=170.22.2.22   ansible_user=ubuntu     owner: Cray
+   
+#In practice, variables, SSH keys, and server passwords are stored in separate files in the Ansible project directory.
